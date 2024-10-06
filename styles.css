@@ -3,11 +3,13 @@ body {
     line-height: 1.6;
     margin: 0;
     padding: 20px;
+    background-color: #000; /* Black background */
+    color: #fff; /* White text */
 }
 
 header {
-    background: #333;
-    color: #fff;
+    background: #003366; /* Dark blue */
+    color: #fff; /* White text */
     padding: 10px 0;
     text-align: center;
 }
@@ -27,13 +29,14 @@ nav ul li {
 }
 
 nav ul li a {
-    color: #fff;
+    color: #fff; /* White links */
     text-decoration: none;
 }
 
 h2 {
     font-size: 1.8em;
     margin-top: 20px;
+    color: #00aaff; /* Light blue for section titles */
 }
 
 .responsive-img {
@@ -41,17 +44,21 @@ h2 {
     height: auto;
     display: block;
     margin: 10px auto; /* Center images */
+    border: 2px solid #00aaff; /* Light blue border */
+    border-radius: 10px; /* Rounded corners */
 }
 
 section {
     margin: 20px 0;
     padding: 10px;
-    border: 1px solid #ccc;
+    border: 1px solid #333; /* Darker border for sections */
     border-radius: 5px;
+    background: #1a1a1a; /* Dark background for sections */
 }
 
 footer {
     text-align: center;
     margin-top: 20px;
     font-size: 0.8em;
+    color: #00aaff; /* Light blue for footer text */
 }
