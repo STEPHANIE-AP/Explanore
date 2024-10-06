@@ -1,64 +1,103 @@
-body {
-    font-family: Arial, sans-serif;
-    line-height: 1.6;
+/* General Styles */
+html, body {
+    height: 100%;
     margin: 0;
-    padding: 20px;
+    font-family: Arial, sans-serif;
     background-color: #000; /* Black background */
     color: #fff; /* White text */
 }
 
 header {
-    background: #003366; /* Dark blue */
-    color: #fff; /* White text */
-    padding: 10px 0;
+    background-color: rgba(0, 51, 102, 1); /* Dark blue */
+    color: white;
     text-align: center;
-}
-
-h1 {
-    font-size: 2.5em; /* Bigger for the main title */
+    padding: 2rem 0; /* Larger padding for the header */
 }
 
 nav ul {
-    list-style: none;
+    list-style-type: none;
     padding: 0;
 }
 
 nav ul li {
     display: inline;
-    margin: 0 10px;
+    margin: 0 15px;
 }
 
 nav ul li a {
-    color: #fff; /* White links */
+    color: #00ccff; /* Light blue for links */
     text-decoration: none;
+    font-weight: bold;
 }
 
-h2 {
-    font-size: 1.8em;
-    margin-top: 20px;
-    color: #00aaff; /* Light blue for section titles */
-}
-
-.responsive-img {
-    width: 300px; /* Medium size for images */
-    height: auto;
-    display: block;
-    margin: 10px auto; /* Center images */
-    border: 2px solid #00aaff; /* Light blue border */
-    border-radius: 10px; /* Rounded corners */
+main {
+    padding: 2rem;
 }
 
 section {
-    margin: 20px 0;
-    padding: 10px;
-    border: 1px solid #333; /* Darker border for sections */
-    border-radius: 5px;
-    background: #1a1a1a; /* Dark background for sections */
+    margin-bottom: 2rem;
+    padding: 1rem;
+    border-radius: 10px;
+    background-color: rgba(255, 255, 255, 0.1); /* Light transparent background */
+    text-align: center; /* Center text in the section */
+}
+
+h2 {
+    color: #00ccff; /* Light blue for section titles */
 }
 
 footer {
+    background-color: rgba(0, 51, 102, 1); /* Dark blue */
+    color: white;
     text-align: center;
-    margin-top: 20px;
-    font-size: 0.8em;
-    color: #00aaff; /* Light blue for footer text */
+    padding: 1rem 0;
+}
+
+button {
+    padding: 10px 20px;
+    background-color: #005f99; /* Blue button */
+    color: white;
+    border: none;
+    cursor: pointer;
+    border-radius: 5px;
+    display: block;
+    margin: 1rem auto; /* Center the button */
+}
+
+button:hover {
+    background-color: #004080; /* Darker blue on hover */
+}
+
+/* Responsive Image */
+.responsive-img {
+    max-width: 400px; /* Set a medium size */
+    width: 100%;      /* Make it responsive */
+    height: auto;     /* Maintain aspect ratio */
+    border-radius: 10px;
+    display: block;    /* Center the image */
+    margin: 0 auto;   /* Center the image */
+}
+
+/* Media Queries for Mobile */
+@media (max-width: 600px) {
+    header {
+        padding: 1rem 0; /* Adjust header padding for mobile */
+    }
+
+    main {
+        padding: 1rem; /* Reduce main padding */
+    }
+
+    section {
+        padding: 0.5rem; /* Reduce section padding */
+    }
+
+    button {
+        width: 100%; /* Make button full width on mobile */
+    }
+
+    /* Adjust image size on mobile */
+    .responsive-img {
+        max-width: 100%; /* Allow full width on smaller screens */
+    }
 }
