@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="styles.css">
+    <title>Ross 128 b Questionnaire</title>
+</head>
+<body>
+    <header>
+        <h1>Ross 128 b Questionnaire</h1>
+        <nav>
+            <ul>
+                <li><a href="index.html">Home</a></li>
+                <li><a href="exoplanets.html">List of Exoplanets</a></li>
+            </ul>
+        </nav>
+    </header>
+    <main>
+        <section id="quiz-content">
+            <h2>Is Ross 128 b within the habitable zone?</h2>
+            <input type="radio" name="q1" value="yes"> Yes<br>
+            <input type="radio" name="q1" value="no"> No<br>
+            <input type="radio" name="q1" value="unknown"> Unknown<br>
+            <button onclick="checkAnswer('q1', 'yes')">Submit</button>
+            <p id="result-q1"></p>
+        </section>
+    </main>
+    <footer>
+        <p>&copy; 2024 Cosmic Stars - Explanore</p>
+    </footer>
+    <script>
+        function checkAnswer(question, correctAnswer) {
+            const answers = document.getElementsByName(question);
+            let selectedAnswer;
+            for (const answer of answers) {
+                if (answer.checked) {
+                    selectedAnswer = answer.value;
+                    break;
+                }
+            }
+            const result = document.getElementById('result-' + question);
+            result.textContent = selectedAnswer === correctAnswer ? "Correct!" : "Incorrect. Try again!";
+        }
+    </script>
+</body>
+</html>

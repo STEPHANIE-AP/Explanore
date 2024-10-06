@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="styles.css">
+    <title>HD 189733b Questionnaire</title>
+</head>
+<body>
+    <header>
+        <h1>HD 189733b Questionnaire</h1>
+        <nav>
+            <ul>
+                <li><a href="index.html">Home</a></li>
+                <li><a href="exoplanets.html">List of Exoplanets</a></li>
+            </ul>
+        </nav>
+    </header>
+    <main>
+        <section id="quiz-content">
+            <h2>What is the weather like on HD 189733b?</h2>
+            <input type="radio" name="q1" value="high winds"> High winds and rain<br>
+            <input type="radio" name="q1" value="calm"> Calm and warm<br>
+            <input type="radio" name="q1" value="cold"> Cold and icy<br>
+            <button onclick="checkAnswer('q1', 'high winds')">Submit</button>
+            <p id="result-q1"></p>
+        </section>
+    </main>
+    <footer>
+        <p>&copy; 2024 Cosmic Stars - Explanore</p>
+    </footer>
+    <script>
+        function checkAnswer(question, correctAnswer) {
+            const answers = document.getElementsByName(question);
+            let selectedAnswer;
+            for (const answer of answers) {
+                if (answer.checked) {
+                    selectedAnswer = answer.value;
+                    break;
+                }
+            }
+            const result = document.getElementById('result-' + question);
+            result.textContent = selectedAnswer === correctAnswer ? "Correct!" : "Incorrect. Try again!";
+        }
+    </script>
+</body>
+</html>

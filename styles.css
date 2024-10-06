@@ -1,0 +1,92 @@
+html, body {
+    height: 100%;
+}
+
+body {
+    display: flex;
+    flex-direction: column;
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #000;
+    color: #fff;
+}
+
+header {
+    background-color: rgba(0, 51, 102, 0.9);
+    color: white;
+    text-align: center;
+    padding: 1rem 0;
+}
+
+nav ul {
+    list-style-type: none;
+    padding: 0;
+}
+
+nav ul li {
+    display: inline;
+    margin: 0 15px;
+}
+
+nav ul li a {
+    color: white;
+    text-decoration: none;
+    font-weight: bold;
+}
+
+main {
+    flex: 1;
+    padding: 2rem;
+    background-color: rgba(255, 255, 255, 0.1);
+    border-radius: 10px;
+}
+
+section {
+    margin-bottom: 2rem;
+    padding: 1rem;
+    border-radius: 10px;
+    background-color: rgba(255, 255, 255, 0.2);
+}
+
+h2 {
+    color: #00ccff;
+    text-align: center;
+}
+
+
+footer {
+    background-color: rgba(0, 51, 102, 0.9);
+    color: white;
+    text-align: center;
+    padding: 1rem 0;
+}
+
+button {
+    padding: 10px 20px;
+    background-color: #005f99;
+    color: white;
+    border: none;
+    cursor: pointer;
+    border-radius: 5px;
+    display: block;
+    margin: 0 auto;
+}
+
+button:hover {
+    background-color: #004080;
+}
+
+.exoplanet {
+    margin-bottom: 20px;
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    background-color: rgba(255, 255, 255, 0.1);
+}
+
+img {
+    width: 100%;
+    height: auto;
+    border-radius: 10px;
+}

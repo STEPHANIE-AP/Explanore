@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="styles.css">
+    <title>HD 209458b Questionnaire</title>
+</head>
+<body>
+    <header>
+        <h1>HD 209458b Questionnaire</h1>
+        <nav>
+            <ul>
+                <li><a href="index.html">Home</a></li>
+                <li><a href="exoplanets.html">List of Exoplanets</a></li>
+            </ul>
+        </nav>
+    </header>
+    <main>
+        <section id="quiz-content">
+            <h2>What method was used to discover HD 209458b?</h2>
+            <input type="radio" name="q1" value="transit"> Transit method<br>
+            <input type="radio" name="q1" value="radial"> Radial velocity<br>
+            <input type="radio" name="q1" value="direct"> Direct imaging<br>
+            <button onclick="checkAnswer('q1', 'transit')">Submit</button>
+            <p id="result-q1"></p>
+        </section>
+    </main>
+    <footer>
+        <p>&copy; 2024 Cosmic Stars - Explanore</p>
+    </footer>
+    <script>
+        function checkAnswer(question, correctAnswer) {
+            const answers = document.getElementsByName(question);
+            let selectedAnswer;
+            for (const answer of answers) {
+                if (answer.checked) {
+                    selectedAnswer = answer.value;
+                    break;
+                }
+            }
+            const result = document.getElementById('result-' + question);
+            result.textContent = selectedAnswer === correctAnswer ? "Correct!" : "Incorrect. Try again!";
+        }
+    </script>
+</body>
+</html>

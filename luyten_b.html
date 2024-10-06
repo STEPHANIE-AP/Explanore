@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="styles.css">
+    <title>Luyten b Questionnaire</title>
+</head>
+<body>
+    <header>
+        <h1>Luyten b Questionnaire</h1>
+        <nav>
+            <ul>
+                <li><a href="index.html">Home</a></li>
+                <li><a href="exoplanets.html">List of Exoplanets</a></li>
+            </ul>
+        </nav>
+    </header>
+    <main>
+        <section id="quiz-content">
+            <h2>What type of star does Luyten b orbit?</h2>
+            <input type="radio" name="q1" value="red dwarf"> Red dwarf<br>
+            <input type="radio" name="q1" value="blue giant"> Blue giant<br>
+            <input type="radio" name="q1" value="yellow dwarf"> Yellow dwarf<br>
+            <button onclick="checkAnswer('q1', 'red dwarf')">Submit</button>
+            <p id="result-q1"></p>
+        </section>
+    </main>
+    <footer>
+        <p>&copy; 2024 Cosmic Stars - Explanore</p>
+    </footer>
+    <script>
+        function checkAnswer(question, correctAnswer) {
+            const answers = document.getElementsByName(question);
+            let selectedAnswer;
+            for (const answer of answers) {
+                if (answer.checked) {
+                    selectedAnswer = answer.value;
+                    break;
+                }
+            }
+            const result = document.getElementById('result-' + question);
+            result.textContent = selectedAnswer === correctAnswer ? "Correct!" : "Incorrect. Try again!";
+        }
+    </script>
+</body>
+</html>

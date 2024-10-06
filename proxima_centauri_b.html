@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="styles.css">
+    <title>Proxima Centauri b Questionnaire</title>
+</head>
+<body>
+    <header>
+        <h1>Proxima Centauri b Questionnaire</h1>
+        <nav>
+            <ul>
+                <li><a href="index.html">Home</a></li>
+                <li><a href="exoplanets.html">List of Exoplanets</a></li>
+            </ul>
+        </nav>
+    </header>
+    <main>
+        <section id="quiz-content">
+            <h2>What type of planet is Proxima Centauri b?</h2>
+            <input type="radio" name="q1" value="rocky"> Rocky<br>
+            <input type="radio" name="q1" value="gas"> Gas Giant<br>
+            <input type="radio" name="q1" value="ice"> Ice Planet<br>
+            <button onclick="checkAnswer('q1', 'rocky')">Submit</button>
+            <p id="result-q1"></p>
+        </section>
+    </main>
+    <footer>
+        <p>&copy; 2024 Cosmic Stars - Explanore</p>
+    </footer>
+    <script>
+        function checkAnswer(question, correctAnswer) {
+            const answers = document.getElementsByName(question);
+            let selectedAnswer;
+            for (const answer of answers) {
+                if (answer.checked) {
+                    selectedAnswer = answer.value;
+                    break;
+                }
+            }
+            const result = document.getElementById('result-' + question);
+            result.textContent = selectedAnswer === correctAnswer ? "Correct!" : "Incorrect. Try again!";
+        }
+    </script>
+</body>
+</html>
