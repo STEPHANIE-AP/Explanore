@@ -44,7 +44,6 @@ section {
 
 h2 {
     color: #00ccff;
-    text-align: center;
 }
 
 footer {
@@ -95,5 +94,10 @@ button:hover {
 
     button {
         width: 100%; /* Make button full width on mobile */
+    }
+
+    /* Adjust image size on mobile */
+    .responsive-img {
+        max-width: 100%; /* Allow full width on smaller screens */
     }
 }
