@@ -68,14 +68,14 @@ button:hover {
     background-color: #004080;
 }
 
-/* Uniform Image Styles */
+/* Responsive Image */
 .responsive-img {
-    width: 150px;      /* Set a fixed width */
-    height: 150px;     /* Set a fixed height */
-    object-fit: cover; /* Ensure images cover the area without distortion */
+    max-width: 150px; /* Set a larger max width */
+    width: 100%;      /* Make it responsive */
+    height: auto;     /* Maintain aspect ratio */
     border-radius: 10px;
-    display: block;     /* Center the image */
-    margin: 0 auto;    /* Center the image */
+    display: block;    /* Center the image */
+    margin: 0 auto;   /* Center the image */
 }
 
 /* Media Queries for Mobile */
@@ -98,7 +98,7 @@ button:hover {
 
     /* Adjust image size on mobile */
     .responsive-img {
-        width: 100px;  /* Adjust width for mobile */
-        height: 100px; /* Adjust height for mobile */
+        max-width: 120px; /* Adjust width for mobile */
+        height: auto; /* Maintain aspect ratio */
     }
 }
